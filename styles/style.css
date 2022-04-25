@@ -79,6 +79,14 @@ header {
     width: 100%;
 }
 
+.ball.reveal {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-color: peachpuff;
+    border-radius: 50%;
+}
+
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
