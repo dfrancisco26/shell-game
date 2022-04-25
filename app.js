@@ -1,18 +1,28 @@
 // import functions and grab DOM elements
-const bOne = document.getElementById(bOne);
-const bTwo = document.getElementById(bTwo);
-const bThree = document.getElementById(bThree);
+const buttOne = document.getElementById(bOne);
+const buttTwo = document.getElementById(bTwo);
+const buttThree = document.getElementById(bThree);
 
-const shellOne = document.getElementById(shellOne);
-const shellTwo = document.getElementById(shellTwo);
-const shellThree = document.getElementById(shellThree);
+const sOne = document.getElementById(shellOne);
+const sTwo = document.getElementById(shellTwo);
+const sThree = document.getElementById(shellThree);
 
-const wins = document.getElementById(wins);
-const losses = document.getElementById(losses);
-const total = document.getElementById(total);
+const winSpan = document.getElementById(wins);
+const lossSpan = document.getElementById(losses);
+const totalSpan = document.getElementById(total);
 
 // let state
+/*let wins = 0;
+let losses = 0;
+let total = 0;*/
 
+bOne.addEventListener('click', () => {
+/*  sOne.classList.remove('reveal');
+  sTwo.classList.remove('reveal');
+  sThree.classList.remove('reveal');*/
+
+    console.log('clicking');
+})
 // set event listeners 
   // get user input
   // use user input to update state 
