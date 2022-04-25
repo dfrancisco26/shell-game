@@ -67,10 +67,14 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-left: 200px;
     
 }
 
+.button {
+    display:;
+    
+    justify-content:space-between;
+}
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
