@@ -75,9 +75,6 @@ header {
     justify-content: flex-end;
 }
 
-.shell img {
-    width: 100%;
-}
 
 .ball.reveal {
     height: 40px;

@@ -21,15 +21,15 @@ function resetBalls() {
 }
 
 function displayResults() {
-  winSpan.textContent = wins;
-  totalSpan.textContent = total;
-  lossesSpan.textcontent = total - wins;
+    winSpan.textContent = wins;
+    totalSpan.textContent = total;
+    lossesSpan.textContent = total - wins;
 }
 
 butt1.addEventListener('click', () => {
     total++;
     resetBalls();
-    const ballLocation = Math.ceil(Math.random() * 3)
+    const ballLocation = Math.ceil(Math.random() * 3);
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
         wins++;
@@ -44,7 +44,7 @@ butt1.addEventListener('click', () => {
 butt2.addEventListener('click', () => {
     total++;
     resetBalls();
-    const ballLocation = Math.ceil(Math.random() * 3)
+    const ballLocation = Math.ceil(Math.random() * 3);
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
     } else if (ballLocation === 2) {
@@ -59,7 +59,7 @@ butt2.addEventListener('click', () => {
 butt3.addEventListener('click', () => {
     total++;
     resetBalls();
-    const ballLocation = Math.ceil(Math.random() * 3)
+    const ballLocation = Math.ceil(Math.random() * 3);
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
     } else if (ballLocation === 2) {
