@@ -8,11 +8,35 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 1) **Make a drawing of your app. Simple "wireframes"** 
 1) **Look at the drawing and name the HTML elements you'll need to realize your vision**
+  - a <class> to reveal the ball
+  - Buttons <button>
+  - Text content in the form of <span>s
+  - three images of shells
+  - three images of balls
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
+  - The state of each shell and whether the random number is equal to it or not. 
+  - The state of the current win, loss, and total.
+  - Whether the user has clicked or not.
+  - Whether the user guessed right or wrong.
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
+  - We need <button> for the user to click
+  - We must display the shells and balls to give feedback using <img>
+  - we use the element <class> so we can hide and unhide the ball
+
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
+- create a <button> element, and then import it into our JS using getElementById(
+- Create <span> elements and import them as well
+- Create <img> elements in HTML and import them
+- Create a function that calls a random number between 1-3
+- Use Math.ceil to round that number up
+- 
+)
 1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
+- User clicks the button to guess
+- The page will compare that to the pre-determined number generated
+- The shell will lift and reveal if the user is correct or not
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
+- Console.log the button once i create it, and use that to also test the function once it has been built.
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
 Additional considerations:
