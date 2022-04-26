@@ -1,28 +1,77 @@
 // import functions and grab DOM elements
-const buttOne = document.getElementById(bOne);
-const buttTwo = document.getElementById(bTwo);
-const buttThree = document.getElementById(bThree);
+const butt1 = document.getElementById('bOne');
+const butt2 = document.getElementById('bTwo');
+const butt3 = document.getElementById('bThree');
 
-const sOne = document.getElementById(shellOne);
-const sTwo = document.getElementById(shellTwo);
-const sThree = document.getElementById(shellThree);
+const ball1 = document.getElementById('ballOne');
+const ball2 = document.getElementById('ballTwo');
+const ball3 = document.getElementById('ballThree');
 
-const winSpan = document.getElementById(wins);
-const lossSpan = document.getElementById(losses);
-const totalSpan = document.getElementById(total);
+const winSpan = document.getElementById('wins');
+const lossesSpan = document.getElementById('losses');
+const totalSpan = document.getElementById('total');
 
-// let state
-/*let wins = 0;
-let losses = 0;
-let total = 0;*/
+let wins = 0;
+let total = 0;
 
-bOne.addEventListener('click', () => {
-/*  sOne.classList.remove('reveal');
-  sTwo.classList.remove('reveal');
-  sThree.classList.remove('reveal');*/
+function resetBalls() {
+    ball1.classList.remove('reveal');
+    ball2.classList.remove('reveal');
+    ball3.classList.remove('reveal');
+}
 
-    console.log('clicking');
-})
+function displayResults() {
+  winSpan.textContent = wins;
+  totalSpan.textContent = total;
+  lossesSpan.textcontent = total - wins;
+}
+
+butt1.addEventListener('click', () => {
+    total++;
+    resetBalls();
+    const ballLocation = Math.ceil(Math.random() * 3)
+    if (ballLocation === 1) {
+        ball1.classList.add('reveal');
+        wins++;
+    } else if (ballLocation === 2) {
+        ball2.classList.add('reveal');
+    } else {
+        ball3.classList.add('reveal');
+    }
+    displayResults();
+});
+
+butt2.addEventListener('click', () => {
+    total++;
+    resetBalls();
+    const ballLocation = Math.ceil(Math.random() * 3)
+    if (ballLocation === 1) {
+        ball1.classList.add('reveal');
+    } else if (ballLocation === 2) {
+        ball2.classList.add('reveal');
+        wins++;
+    } else {
+        ball3.classList.add('reveal');
+    }
+    displayResults();
+});
+
+butt3.addEventListener('click', () => {
+    total++;
+    resetBalls();
+    const ballLocation = Math.ceil(Math.random() * 3)
+    if (ballLocation === 1) {
+        ball1.classList.add('reveal');
+    } else if (ballLocation === 2) {
+        ball2.classList.add('reveal');
+    } else {
+        ball3.classList.add('reveal');
+        wins++;
+    }
+    displayResults();    
+});
+
+
 // set event listeners 
   // get user input
   // use user input to update state 

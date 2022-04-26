@@ -40,7 +40,7 @@ main {
 }
 
 
-section {
+.sectionMega {
     background-color: var(--color5);
     max-width: 80%;
     display: flex;
